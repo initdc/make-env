@@ -72,7 +72,11 @@ def main(argv)
       _arch = in_arch
     else
       index = in_arch.to_i - 1
-      _arch = ARCH[index]
+      _arch = if index >= 0 && index < ARCH.size
+                ARCH[index]
+              else
+                in_arch
+              end
     end
 
     print "CROSS_COMPILE: "
