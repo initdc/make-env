@@ -26,11 +26,17 @@ ARCH = %w[
   xtensa
 ].freeze
 
+# https://packages.debian.org/search?searchon=contents&keywords=-gcc&mode=path&suite=stable&arch=any
+# https://github.com/initdc/config/blob/master/testsuite/config-sub.data
 CROSS_COMPILE = %w[
   aarch64-linux-gnu-
+  alpha-linux-gnu-
   arm-linux-gnueabi-
   arm-linux-gnueabihf-
+  csky-unknown-linux-gnu-
+  i586-linux-gnu-
   i686-linux-gnu-
+  m68k-linux-gnu-
   mips-linux-gnu-
   mipsel-linux-gnu-
   mips64-linux-gnuabi64-
@@ -40,7 +46,10 @@ CROSS_COMPILE = %w[
   powerpc64le-linux-gnu-
   riscv64-linux-gnu-
   s390x-linux-gnu-
+  sh4-linux-gnu-
+  sparc64-linux-gnu-
   x86_64-linux-gnu-
+  xtensa-unknown-linux-gnu-
 ].freeze
 
 def main(argv)
